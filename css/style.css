@@ -8,7 +8,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.info-container{
+.info-container-class{
     margin: 20px auto;
     width: 350px;
     background-color: rgb(199, 209, 219);
@@ -16,4 +16,38 @@ body{
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 5px 5px 30px -10px rgb(0, 0, 0);
+}
+.custom-width-info{
+    width: 50%;
+}
+.custom-bg-light{
+    background-color: #1d2e44;
+    transition: ease-out 0.5s;
+}
+.custom-bg-light:hover{
+    background-color: #f3ebeb;
+}
+.custom-bg-dark{
+    background-color: #212529;
+    color: #f3ebeb;
+    transition: linear 0.5s;
+    padding: 3rem!;
+}
+.custom-bg-dark:hover{
+    background-color: #f3ebeb;
+    color: #212529;
+}
+.feature-list{
+    list-style: none;
+}
+@media only screen and (max-width: 768px) and (min-width: 576px) {
+    .custom-width-info{
+        width: 90%;
+    }
+    .custom-bg-dark{
+        padding: 2px;
+    }
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+    
 }
