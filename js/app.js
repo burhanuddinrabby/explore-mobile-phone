@@ -2,6 +2,7 @@
 document.querySelector('#search-btn').addEventListener('click', () => {
     const searchValue = document.getElementById('search-text').value.toLowerCase();
 
+    //taking serach value or else
     if (searchValue !== '') {
         document.getElementById('body').classList.remove('default-view');
         fetch(`https://openapi.programming-hero.com/api/phones?search=${searchValue}`)
@@ -23,6 +24,7 @@ const phoneContainer = document.getElementById('phn-container');
 //load section
 const loadData = (data) => {
 
+    //when search data is empty
     if (data.length === 0) {
         document.getElementById('error-msg').innerText = 'No Phone Found';
         document.getElementById('info-container').innerHTML = ``;
@@ -32,16 +34,16 @@ const loadData = (data) => {
             if (data.indexOf(info) < 20) {
                 const div = document.createElement('div');
                 div.innerHTML = `
-            <img class="mt-3" style="width:100%; border-radius: 20px;" src='${info.image}'>
-            <div class="my-3">
-                <h5 class="card-title">${info.phone_name}</h5>
-                <p class="card-text">Brand : ${info.brand}</p>
-                <a href="#" onClick = 'showDetails(${JSON.stringify(info)})' class="btn btn-primary">Details</a>
-            </div>
+                    <img class="mt-3" style="width:100%; border-radius: 20px;" src='${info.image}'>
+                    <div class="my-3">
+                        <h5 class="card-title">${info.phone_name}</h5>
+                        <p class="card-text">Brand : ${info.brand}</p>
+                        <a href="#" onClick = 'showDetails(${JSON.stringify(info)})' class="btn btn-primary">Details ></a>
+                    </div>
             `;
                 div.classList.add('info-container-class', 'col-lg-3', 'col-md-5', 'col-sm-10', 'mx-auto');
                 phoneContainer.appendChild(div);
-            }
+            };
         })
     }
 }
@@ -63,6 +65,8 @@ const showDetails = (info) => {
                     return r_date;
                 }
             }
+
+            //phone features info container
             phnInfoContainer.innerHTML = `
             <h4>Release Date : ${returningDate(info.data.releaseDate)}</h4>
                     <p>
@@ -77,10 +81,10 @@ const showDetails = (info) => {
             `;
             const fetureContainer = document.getElementById('feature-container');
             const featureList = info.data.mainFeatures.sensors;
+            //if sensore list exist
             if (featureList.length !== 0) {
-                // console.log('sen');
                 const li = document.createElement('li');
-                // li.innerHTML = ` Sensors : ${featureList.join(', ')}`;
+                //accordion for features
                 li.innerHTML = `
                     <div class="accordion accordion-flush my-3" id="accordionFlushExample">
                         <div class="accordion-item">
@@ -107,6 +111,7 @@ const showDetails = (info) => {
                 fetureContainer.appendChild(li);
             }
         })
+    //card view
     document.getElementById('info-container').innerHTML = `
         <div class="row">    
             <div class="col-lg-6 rounded d-flex justify-content-center align-items-center custom-bg-light"><img

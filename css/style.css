@@ -43,6 +43,7 @@ body{
 .feature-list>li{
     margin-left: -18px;
 }
+
 @media only screen and (max-width: 768px) and (min-width: 576px) {
     .custom-width-info{
         width: 90%;
