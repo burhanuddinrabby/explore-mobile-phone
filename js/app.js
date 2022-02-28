@@ -72,10 +72,10 @@ const showDetails = (info) => {
                     <p>
                     <h4><u>Features</u></h4>
                     <ul id="feature-container" class="feature-list">
-                        <li>Chipset : ${info.data.mainFeatures.chipSet}</li>
-                        <li>Memory : ${info.data.mainFeatures.memory}</li>
-                        <li>Storage : ${info.data.mainFeatures.storage}</li>
-                        <li>Display : ${info.data.mainFeatures.displaySize}</li>
+                        <li><b>Chipset :</b> ${info.data.mainFeatures.chipSet}</li>
+                        <li><b>Memory : </b>${info.data.mainFeatures.memory}</li>
+                        <li><b>Storage :</b> ${info.data.mainFeatures.storage}</li>
+                        <li><b>Display :</b> ${info.data.mainFeatures.displaySize}</li>
                     </ul>
                     </p>
             `;
@@ -96,14 +96,14 @@ const showDetails = (info) => {
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse" style="color:black" aria-labelledby="flush-headingOne"
                                 data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    Sensors : ${featureList.join(', ')} <br>
-                                    Bluetooth : ${info.data.others.Bluetooth} <br>
-                                    GPS : ${info.data.others.GPS} <br>
-                                    NFC : ${info.data.others.NFC} <br>
-                                    Radio : ${info.data.others.Radio} <br>
-                                    USB : ${info.data.others.USB} <br>
-                                    WLAN : ${info.data.others.WLAN} <br>
+                                <div class="accordion-body custom-bg">
+                                    <b>Sensors :</b> ${featureList.join(', ')} <br>
+                                    <b>Bluetooth :</b> ${info.data.others.Bluetooth} <br>
+                                    <b>GPS :</b> ${info.data.others.GPS} <br>
+                                    <b>NFC :</b> ${info.data.others.NFC} <br>
+                                    <b>Radio :</b> ${info.data.others.Radio} <br>
+                                    <b>USB :</b> ${info.data.others.USB} <br>
+                                    <b>WLAN :</b> ${info.data.others.WLAN} <br>
                                 </div>
                             </div>
                         </div>
