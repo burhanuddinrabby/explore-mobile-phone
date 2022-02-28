@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(8 41 54);
+    /* color: rgb(255, 255, 255); */
+}
+.default-view{
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info-container{
+    margin: 20px auto;
+    background-color: rgb(223, 229, 235);
+    border: 1px solid rgb(223, 229, 235);
+    border-radius: 10px;
+    overflow: hidden;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    box-shadow: 10px 10px 50px -10px rgb(150, 153, 156);
+}
