@@ -1,9 +1,8 @@
 body{
     background-color: rgb(8 41 54);
-    /* color: rgb(255, 255, 255); */
 }
 .default-view{
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,12 +10,10 @@ body{
 }
 .info-container{
     margin: 20px auto;
-    background-color: rgb(223, 229, 235);
+    width: 350px;
+    background-color: rgb(199, 209, 219);
     border: 1px solid rgb(223, 229, 235);
     border-radius: 10px;
     overflow: hidden;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-    box-shadow: 10px 10px 50px -10px rgb(150, 153, 156);
+    box-shadow: 5px 5px 30px -10px rgb(0, 0, 0);
 }
